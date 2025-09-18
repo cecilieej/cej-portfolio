@@ -5,7 +5,23 @@ const About = () => {
     <section id="about" className="section hero">
       <div className="container">
         <div className="section-content">
-          <h1 className="hero-title">
+          <h1
+            className="
+              hero-title
+              bg-gradient-to-r
+              from-blue-500
+              via-green-300
+              to-purple-600
+              bg-clip-text
+              text-transparent
+              font-extrabold
+              animate-gradient-x
+            "
+            style={{
+              backgroundSize: '200% 200%',
+              animation: 'gradient-x 9s ease-in-out infinite'
+            }}
+          >
             Hello! I'm Cecilie Ellegaard Jacobsen. Check out what I'm working on here.
           </h1>
           <p className="hero-subtitle">
