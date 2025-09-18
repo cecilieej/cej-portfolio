@@ -34,7 +34,7 @@ const MyProjects = () => {
       id: 4,
       title: "Data Entry Optimization Tool",
       description: "A tool designed during my 8th semester to streamline data entry processes and reduce manual input errors for an engineering company working with PLM systems in M365. Built with Python.",
-      technologies: ["Python", "Tailwind CSS"],
+      technologies: ["Python", "Tailwind CSS", "SQL"],
       demoUrl: "#",
       githubUrl: "#",
       imageUrl: "/PLM-solution.png"

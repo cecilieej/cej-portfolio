@@ -5,6 +5,7 @@ import Experience from './components/Experience'
 import MyProjects from './components/MyProjects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { Analytics } from '@vercel/analytics/react';
 import './index.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <MyProjects />
         <Experience />
         <Contact />
+        <Analytics />
       </main>
       
       <Footer />

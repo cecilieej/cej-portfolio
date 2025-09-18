@@ -22,7 +22,7 @@ const About = () => {
               animation: 'gradient-x 9s ease-in-out infinite'
             }}
           >
-            Hello! I'm Cecilie Ellegaard Jacobsen. Check out what I'm working on here.
+            Hi! I'm Cecilie Ellegaard Jacobsen. Here's what I've been working on.
           </h1>
           <p className="hero-subtitle">
             I am an aspiring full-stack developer with a passion for digitalization.
@@ -48,16 +48,24 @@ const About = () => {
               <span className="tech-tag">JavaScript</span>
               <span className="tech-tag">React</span>
               <span className="tech-tag">Next.js</span>
+              <span className="tech-tag">TypeScript</span>
               <span className="tech-tag">HTML + CSS</span>
               <span className="tech-tag">Tailwind CSS</span>
               <span className="tech-tag">Python</span>
               <span className="tech-tag">Flask</span>
               <span className="tech-tag">Android</span>
+              <span className="tech-tag">System architecture</span>
+              <span className="tech-tag">Database management</span>
+              <span className="tech-tag">SQL</span>
               <span className="tech-tag">ML algorithms</span>
               <span className="tech-tag">RESTful APIs</span>
               <span className="tech-tag">C#</span>
               <span className="tech-tag">.NET</span>
-              <span className="tech-tag">Git</span>
+              <span className="tech-tag">Angular</span>
+              <span className="tech-tag">UX Design</span>
+              <span className="tech-tag">Figma</span>
+              <span className="tech-tag">Git workflows</span>
+              <span className="tech-tag">Agile methodologies</span>
             </div>
           </div>
         </div>
