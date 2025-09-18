@@ -35,8 +35,8 @@ const MyProjects = () => {
       title: "Data Entry Optimization Tool",
       description: "A tool designed during my 8th semester to streamline data entry processes and reduce manual input errors for an engineering company working with PLM systems in M365. Built with Python.",
       technologies: ["Python", "Tailwind CSS"],
-      //demoUrl: "#",
-      //githubUrl: "#",
+      demoUrl: "#",
+      githubUrl: "#",
       imageUrl: "/PLM-solution.png"
     },
     {
@@ -52,7 +52,7 @@ const MyProjects = () => {
       id: 6,
       title: "Portfolio Website",
       description: "The site you're viewing right now! A simple portfolio website built with React and Vite. Featuring some smooth animations and a nice dark mode for your (and my own) viewing pleasure.",
-      technologies: ["JS", "React", "Vite", "HTML/CSS", "Netlify"],
+      technologies: ["JS", "React", "Vite", "HTML/CSS", "Vercel"],
       demoUrl: "#",
       githubUrl: "#",
       imageUrl: "/api/placeholder/400/250"
