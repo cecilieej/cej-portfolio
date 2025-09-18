@@ -86,7 +86,7 @@ a:hover {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 100;
   color: #1f2937;
 }
 
@@ -121,8 +121,9 @@ a:hover {
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 1.8rem;
   /* Purple gradient */
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
   /* Blue gradient */
@@ -148,6 +149,10 @@ a:hover {
 
 .hero-actions {
   margin-bottom: 2.5rem;
+  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
 }
 
 /* Project Cards */
@@ -239,10 +244,13 @@ a:hover {
   color: white;
 }
 
-/* Experience Timeline */
+/* Experience Timeline, right now Education */
 .experience-timeline {
+  display: flex;
+  gap: 0.1rem;
+  flex-direction: column;
   position: relative;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .experience-item {
@@ -251,7 +259,14 @@ a:hover {
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #2563eb;
+  border-right: 4px solid #2563eb;
+}
+
+.experience-item:hover {
+  box-shadow: 0 8px 24px -4px rgba(37,99,235,0.15);
+  border-right: 4px solid #3b82f6;
+  transform: scale(1.02) translateY(-2px);
+  background: #f3f8ff;
 }
 
 .experience-title {
@@ -277,7 +292,24 @@ a:hover {
   color: #4b5563;
 }
 
-/* Contact Form */
+.experience-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: 
+    max-height 0.5s cubic-bezier(0.4,0,0.2,1),
+    opacity 0.4s cubic-bezier(0.4,0,0.2,1),
+    transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.experience-item.expanded .experience-details {
+  max-height: 500px; /* enough to fit content */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Form, right now deleted but if I use it later */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;

@@ -47,7 +47,7 @@ const Footer = () => {
           <p>&copy; {currentYear} Cecilie Jacobsen. All rights reserved.</p>
           
           <p>
-            Built with ❤️ using React & Vite
+            Built using React & Vite
           </p>
         </div>
       </div>

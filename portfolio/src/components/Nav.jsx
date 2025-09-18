@@ -21,8 +21,8 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <div className="logo">
-        Cecilie Ellegaard Jacobsen
+      <div className="logo"> 
+        Cece's Portfolio
       </div>
       
       <ul className="nav-links">
