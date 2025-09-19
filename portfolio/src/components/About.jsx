@@ -19,7 +19,7 @@ const About = () => {
             "
             style={{
               backgroundSize: '200% 200%',
-              animation: 'gradient-x 9s ease-in-out infinite'
+              animation: 'gradient-x 8s ease-in-out infinite'
             }}
           >
             Hi! I'm Cecilie Ellegaard Jacobsen. Here's what I've been working on.

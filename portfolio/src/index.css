@@ -212,6 +212,7 @@ a:hover {
   color: #374151;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
+  margin-inline: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -381,6 +382,26 @@ a:hover {
 
 .social-link:hover {
   color: white;
+}
+
+/* Contact Section Styles */
+.contact-item {
+  margin-bottom: 2rem; /* Space between email and location blocks */
+}
+
+.contact-item h4 {
+  margin-bottom: 0.25rem; /* Reduced space between title and text */
+  color: #1f2937;
+}
+
+.contact-item a,
+.contact-item p {
+  /* color: #6b7280; If I want to change the color of the text*/
+  margin-bottom: 0; /* Reset default paragraph margin */
+}
+
+.contact-item:last-child {
+  margin-bottom: 0; /* Remove margin from last item */
 }
 
 /* Responsive Design */

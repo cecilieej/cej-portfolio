@@ -24,8 +24,8 @@ const MyProjects = () => {
     {
       id: 3,
       title: "EcoHour",
-      description: "A responsive planning dashboard that displays real-time electricity prices, and interactive maps using MinStrøm's API.",
-      technologies: ["Android Studio", "Java", "MinStrøm API", "HTML/CSS"],
+      description: "Calendar designed for households to optimize energy usage during low-cost hours by displaying real-time electricity prices. Built with Java in Android Studio.",
+      technologies: ["Android", "Java", "MinStrøm API", "HTML/CSS"],
       demoUrl: "#",
       githubUrl: "https://github.com/targot19/P8",
       imageUrl: "\ecohour.png"
@@ -34,7 +34,7 @@ const MyProjects = () => {
       id: 4,
       title: "Data Entry Optimization Tool",
       description: "A tool designed during my 8th semester to streamline data entry processes and reduce manual input errors for an engineering company working with PLM systems in M365. Built with Python.",
-      technologies: ["Python", "Tailwind CSS", "SQL"],
+      technologies: ["Python", "Tailwind CSS", "SQL", "SQLite"],
       demoUrl: "#",
       githubUrl: "#",
       imageUrl: "/PLM-solution.png"
@@ -43,7 +43,7 @@ const MyProjects = () => {
       id: 5,
       title: "Movie Website",
       description: "In progress. A platform for myself and friends to import their Letterboxd data to get an overview of which movies they have in common. Built with C#, .NET, Next.js and React",
-      technologies: ["C#", ".NET", "Next.js", "React", "Vite", "Tailwind CSS", "TMDB API"],
+      technologies: ["C#", ".NET", "Next.js", "React", "Vite", "Tailwind CSS"],
       demoUrl: "#",
       githubUrl: "#",
       imageUrl: "/api/placeholder/400/250"

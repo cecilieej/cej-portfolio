@@ -26,13 +26,13 @@ const Contact = () => {
     >
       <div className="container">
         <div className="section-content flex flex-col items-center text-center">
-          <h2>Contact Me</h2>
+          <h2>Want to contact me?</h2>
           <p>
             Feel free to reach out, I love to receive mail from real people. <br />
           </p>
           <div className="contact-content flex flex-col md:flex-row items-center gap-8 justify-center">
             <img
-              src="/src/assets/cej_september_nobg_color.PNG"
+              src="/cej_september_nobg_color.PNG"
               alt="Cecilie Ellegaard Jacobsen"
               className="w-40 h-40 object-cover rounded-full border-4 border-blue-500 shadow-lg mb-6"
             />
