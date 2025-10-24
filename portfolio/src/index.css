@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
-/* @import "tw-animate-css"; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -16,11 +15,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Use Tailwind utilities instead of hardcoded colors */
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
+}
+
+/* Apply dark mode styles using Tailwind utilities */
+@layer base {
+  body {
+    @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100;
+  }
 }
 
 /* Typography */
@@ -42,8 +47,6 @@ p {
 }
 
 a {
-  color: #2563eb;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -69,18 +72,21 @@ a:hover {
   width: 100%;
 }
 
-/* Header and Navigation */
+/* Header and Navigation - using Tailwind classes */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e5e7eb;
-  z-index: 1000;
+  z-index: 50;
   padding: 1rem 0;
   transition: all 0.3s ease;
+}
+
+@layer components {
+  .header {
+    @apply bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700;
+  }
 }
 
 .nav {
@@ -92,7 +98,12 @@ a:hover {
 .logo {
   font-size: 1.5rem;
   font-weight: 100;
-  color: #1f2937;
+}
+
+@layer components {
+  .logo {
+    @apply text-gray-800 dark:text-gray-100;
+  }
 }
 
 .nav-links {
@@ -106,8 +117,10 @@ a:hover {
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #2563eb;
+@layer components {
+  .nav-link {
+    @apply text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400;
+  }
 }
 
 .mobile-menu-btn {
@@ -116,6 +129,12 @@ a:hover {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@layer components {
+  .mobile-menu-btn {
+    @apply text-gray-700 dark:text-gray-200;
+  }
 }
 
 /* Hero/About Section */
@@ -129,38 +148,23 @@ a:hover {
   font-weight: 800;
   margin-top: 1.5rem;
   margin-bottom: 1.8rem;
-  /* Purple gradient */
-  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  /* Blue gradient */
-  /* background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); */
-  /* Blue-orange gradient - favorite static gradient! */
-  /* background: linear-gradient(135deg, #2563eb 0%, #f59e42 100%); */
-  /* Blue to orange to purple */
-  /* background: linear-gradient(135deg, #2563eb 0%, #f59e42 50%, #7c3aed 100%); */
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-@keyframes gradient-x {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: left center;
-  }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
-  }
-}
-
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@layer components {
+  .hero-subtitle {
+    @apply text-gray-600 dark:text-gray-300;
+  }
 }
 
 .hero-actions {
@@ -180,12 +184,17 @@ a:hover {
 }
 
 .project-card {
-  background: #ffffff;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #e5e7eb;
+}
+
+@layer components {
+  .project-card {
+    @apply bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700;
+  }
 }
 
 .project-card:hover {
@@ -197,12 +206,22 @@ a:hover {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #1f2937;
+}
+
+@layer components {
+  .project-title {
+    @apply text-gray-900 dark:text-gray-100;
+  }
 }
 
 .project-description {
-  color: #6b7280;
   margin-bottom: 1rem;
+}
+
+@layer components {
+  .project-description {
+    @apply text-gray-600 dark:text-gray-300;
+  }
 }
 
 .project-tech {
@@ -213,13 +232,17 @@ a:hover {
 }
 
 .tech-tag {
-  background: #f3f4f6;
-  color: #374151;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   margin-inline: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+@layer components {
+  .tech-tag {
+    @apply bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200;
+  }
 }
 
 .project-links {
@@ -252,16 +275,16 @@ a:hover {
 
 .btn-secondary {
   background: transparent;
-  color: #2563eb;
   border: 2px solid #2563eb;
 }
 
-.btn-secondary:hover {
-  background: #2563eb;
-  color: white;
+@layer components {
+  .btn-secondary {
+    @apply text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400 hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-gray-900;
+  }
 }
 
-/* Experience Timeline, right now Education */
+/* Experience Timeline */
 .experience-timeline {
   display: flex;
   gap: 0.1rem;
@@ -271,7 +294,6 @@ a:hover {
 }
 
 .experience-item {
-  background: white;
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -279,97 +301,101 @@ a:hover {
   border-right: 4px solid #2563eb;
 }
 
+@layer components {
+  .experience-item {
+    @apply bg-white dark:bg-gray-800;
+  }
+}
+
 .experience-item:hover {
   box-shadow: 0 8px 24px -4px rgba(37,99,235,0.15);
   border-right: 4px solid #3b82f6;
   transform: scale(1.02) translateY(-2px);
-  background: #f3f8ff;
+}
+
+@layer components {
+  .experience-item:hover {
+    @apply bg-blue-50 dark:bg-gray-700;
+  }
 }
 
 .experience-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
   margin-bottom: 0.5rem;
+}
+
+@layer components {
+  .experience-title {
+    @apply text-gray-900 dark:text-gray-100;
+  }
 }
 
 .experience-company {
   font-weight: 500;
-  color: #2563eb;
   margin-bottom: 0.25rem;
 }
 
+@layer components {
+  .experience-company {
+    @apply text-blue-600 dark:text-blue-400;
+  }
+}
+
 .experience-period {
-  color: #6b7280;
   font-size: 0.875rem;
   margin-bottom: 1rem;
 }
 
+@layer components {
+  .experience-period {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+}
+
 .experience-description {
-  color: #4b5563;
+  /* Add dark mode styles */
 }
 
-.experience-details {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transform: translateY(-10px);
-  transition: 
-    max-height 0.5s cubic-bezier(0.4,0,0.2,1),
-    opacity 0.4s cubic-bezier(0.4,0,0.2,1),
-    transform 0.4s cubic-bezier(0.4,0,0.2,1);
+@layer components {
+  .experience-description {
+    @apply text-gray-700 dark:text-gray-300;
+  }
 }
 
-.experience-item.expanded .experience-details {
-  max-height: 500px; /* enough to fit content */
-  opacity: 1;
-  transform: translateY(0);
+/* Contact Section Styles */
+.contact-item h4 {
+  margin-bottom: 0.25rem;
 }
 
-/* Contact Form, right now deleted but if I use it later */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+@layer components {
+  .contact-item h4 {
+    @apply text-gray-900 dark:text-gray-100;
+  }
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
+.contact-item a,
+.contact-item p {
+  margin-bottom: 0;
 }
 
-.form-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: #374151;
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  border-color: #2563eb;
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 120px;
+@layer components {
+  .contact-item a,
+  .contact-item p {
+    @apply text-gray-600 dark:text-gray-300;
+  }
 }
 
 /* Footer */
 .footer {
-  background: #1f2937;
-  color: white;
   padding: 2rem 0;
   text-align: center;
+}
+
+@layer components {
+  .footer {
+    @apply bg-gray-900 dark:bg-gray-950 text-white;
+  }
 }
 
 .social-links {
@@ -380,36 +406,17 @@ a:hover {
 }
 
 .social-link {
-  color: #9ca3af;
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
-.social-link:hover {
-  color: white;
+@layer components {
+  .social-link {
+    @apply text-gray-400 hover:text-white;
+  }
 }
 
-/* Contact Section Styles */
-.contact-item {
-  margin-bottom: 2rem; /* Space between email and location blocks */
-}
-
-.contact-item h4 {
-  margin-bottom: 0.25rem; /* Reduced space between title and text */
-  color: #1f2937;
-}
-
-.contact-item a,
-.contact-item p {
-  /* color: #6b7280; If I want to change the color of the text*/
-  margin-bottom: 0; /* Reset default paragraph margin */
-}
-
-.contact-item:last-child {
-  margin-bottom: 0; /* Remove margin from last item */
-}
-
-/* Responsive Design */
+/* Keep all your existing responsive styles unchanged */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -468,6 +475,7 @@ a:hover {
   }
 }
 
+/* Keep all your existing shadcn/ui theme variables */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
