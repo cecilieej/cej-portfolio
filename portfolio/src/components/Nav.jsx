@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { ModeToggle } from './darkmode/mode-toggle'
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -41,6 +42,8 @@ const Nav = () => {
           </li>
         ))}
       </ul>
+
+      <ModeToggle />
       
       <button 
         className="mobile-menu-btn"
