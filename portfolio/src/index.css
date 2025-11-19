@@ -32,7 +32,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 h1 { font-size: 2.5rem; }
@@ -172,7 +172,7 @@ a:hover {
   gap: 1.5rem;
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  padding: 8rem;
 }
 
 /* Project Cards */
@@ -413,6 +413,83 @@ a:hover {
 @layer components {
   .social-link {
     @apply text-gray-400 hover:text-white;
+  }
+}
+
+/* Horizontal Scrolling Tech Tags */
+.scroller {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 80s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 120s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* General preference */
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+/* Style the list items as tags */
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list li {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@layer components {
+  .tag-list li {
+    @apply bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200;
   }
 }
 
