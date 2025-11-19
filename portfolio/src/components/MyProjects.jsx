@@ -61,7 +61,7 @@ const MyProjects = () => {
     {
       id: 6,
       title: "Portfolio Website",
-      description: "The site you're viewing right now! A simple portfolio website built with React and Vite. Working on implementing a nice dark mode for your (and my own) viewing pleasure.",
+      description: "The site you're viewing right now! A simple portfolio website built with React and Vite. Also featuring a nice dark mode for your (and my own) viewing pleasure.",
       technologies: ["JS", "React", "Vite", "HTML/CSS", "Vercel"],
       demoUrl: "https://cecilieej.vercel.app",
       showDemo: true,
