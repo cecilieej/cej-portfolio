@@ -21,6 +21,7 @@ const About = () => {
               backgroundSize: '200% 200%',
               animation: 'gradient-x 8s ease-in-out infinite',
               lineHeight: '1.3',
+              marginTop: '5.5rem',
             }}
           >
             Hi! I'm Cecilie Ellegaard Jacobsen. Here's what I've been working on.
@@ -45,28 +46,30 @@ const About = () => {
              
           <div className="skills-preview">
             <h3>Technologies I work with:</h3>
-            <div className="tech-tags">
-              <span className="tech-tag">JavaScript</span>
-              <span className="tech-tag">React</span>
-              <span className="tech-tag">Next.js</span>
-              <span className="tech-tag">TypeScript</span>
-              <span className="tech-tag">HTML + CSS</span>
-              <span className="tech-tag">Tailwind CSS</span>
-              <span className="tech-tag">Python</span>
-              <span className="tech-tag">Flask</span>
-              <span className="tech-tag">Android</span>
-              <span className="tech-tag">System architecture</span>
-              <span className="tech-tag">Database management</span>
-              <span className="tech-tag">SQL</span>
-              <span className="tech-tag">ML algorithms</span>
-              <span className="tech-tag">RESTful APIs</span>
-              <span className="tech-tag">C#</span>
-              <span className="tech-tag">.NET</span>
-              <span className="tech-tag">Angular</span>
-              <span className="tech-tag">UX Design</span>
-              <span className="tech-tag">Figma</span>
-              <span className="tech-tag">Git workflows</span>
-              <span className="tech-tag">Agile methodologies</span>
+            <div className="scroller" data-speed="slow">
+              <ul className="tag-list scroller__inner">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>HTML + CSS</li>
+                <li>Tailwind CSS</li>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>Android</li>
+                <li>System architecture</li>
+                <li>Database management</li>
+                <li>SQL</li>
+                <li>ML algorithms</li>
+                <li>RESTful APIs</li>
+                <li>C#</li>
+                <li>.NET</li>
+                <li>Angular</li>
+                <li>UX Design</li>
+                <li>Figma</li>
+                <li>Git workflows</li>
+                <li>Agile methodologies</li>
+              </ul>
             </div>
           </div>
         </div>
