@@ -5,8 +5,30 @@ import { Sun, Moon } from 'lucide-react';
 import { useTheme } from './theme-provider';
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={toggleTheme}
+      aria-label="Toggle between light and dark mode"
+    >
+      {theme === 'dark' ? (
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
+      ) : (
+        <Moon className="h-[1.2rem] w-[1.2rem]" />
+      )}
+    </Button>
+  );
+
+
+  // Old dropdown menu version; keeping in case of future use and reference
+  /*
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -22,5 +44,5 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  ); */
 }
