@@ -9,9 +9,9 @@ const About = () => {
             className="
               hero-title
               bg-gradient-to-r
-              from-blue-500
-              via-green-300
-              to-purple-600
+              from-purple-500
+              via-green-400
+              to-sky-600
               bg-clip-text
               text-transparent
               font-extrabold
@@ -19,7 +19,7 @@ const About = () => {
             "
             style={{
               backgroundSize: '200% 200%',
-              animation: 'gradient-x 8s ease-in-out infinite',
+              animation: 'gradient-x 5s ease-in-out infinite',
               lineHeight: '1.3',
               marginTop: '5.5rem',
             }}
