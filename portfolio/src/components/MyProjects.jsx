@@ -5,7 +5,7 @@ const MyProjects = () => {
     {
       id: 1,
       title: "Aku-Log",
-      description: "An acupuncture patient logging site with user authentication, patient data logging and admin dashboard. Built with React and Firebase.",
+      description: "An acupuncture patient logging site with user authentication, patient data logging and admin dashboard. Built with React, and using Firebase for authentication and data storage.",
       technologies: ["JS", "React", "Vite", "HTML/CSS", "Firebase"],
       demoUrl: "https://aku-log.netlify.app",
       showDemo: true,
@@ -16,7 +16,7 @@ const MyProjects = () => {
     {
       id: 2,
       title: "Dopamine Clicker",
-      description: "In progress. A clicker-style game that will stimulate your senses as you earn dopamine points. Built with React and Vite.",
+      description: "In progress. A clicker-style game that will stimulate your senses as you earn dopamine points. Inteded as commentary on overstimulation. Built with React and Vite.",
       technologies: ["JS", "React", "Vite", "HTML/CSS", "Netlify"],
       demoUrl: "#",
       showDemo: true,
@@ -28,8 +28,8 @@ const MyProjects = () => {
     {
       id: 3,
       title: "EcoHour",
-      description: "Calendar designed for households to optimize energy usage during low-cost hours by displaying real-time electricity prices. Built with Java in Android Studio.",
-      technologies: ["Android", "Java", "MinStrøm API", "HTML/CSS"],
+      description: "Calendar designed for households to optimize energy usage during low-cost hours by displaying real-time electricity prices. 10th semester project. Built with Java in Android Studio.",
+      technologies: ["Android", "Java", "Kotlin", "MinStrøm API", "HTML/CSS"],
       demoUrl: "#",
       showDemo: false,
       githubUrl: "https://github.com/targot19/P8",
@@ -40,7 +40,7 @@ const MyProjects = () => {
       id: 4,
       title: "Data Entry Optimization Tool",
       description: "A tool designed during my 8th semester to streamline data entry processes and reduce manual input errors for an engineering company working with PLM systems in M365. Built with Python.",
-      technologies: ["Python", "Pandas", "ScikitLearn", "SQL"],
+      technologies: ["Python", "Pandas", "ML Algorithms", "ScikitLearn", "SQL"],
       demoUrl: "#",
       showDemo: false,
       githubUrl: "#",
@@ -50,8 +50,8 @@ const MyProjects = () => {
     {
       id: 5,
       title: "Movie Website",
-      description: "In progress. A platform for myself and friends to import their Letterboxd data to get an overview of which movies they have in common. To be built with C#, .NET, Next.js and React.",
-      technologies: ["C#", ".NET", "Next.js", "React", "Vite", "Tailwind CSS"],
+      description: "In progress. A platform for myself and friends to import Letterboxd data to see which movies you have in common with other users. Building with React and using Firebase for authentication and data storage.",
+      technologies: ["JS", "React", "Vite", "HTML/CSS", "Tailwind CSS", "Framer Motion", "Firebase"],
       demoUrl: "#",
       showDemo: false,
       githubUrl: "#",
