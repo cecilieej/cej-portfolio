@@ -27,7 +27,7 @@ const About = () => {
             Hi! I'm Cecilie Ellegaard Jacobsen. Here's what I've been working on.
           </h1>
           <p className="hero-subtitle">
-            I am an aspiring full-stack developer with a passion for digitalization.
+            I am an aspiring frontend developer/UX designer with a passion for digitalization.
             I try my best to make things with ❤️. <br />
             I'm also a video game enthusiast and movie lover.
           </p>
