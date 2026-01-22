@@ -8,12 +8,12 @@ const MyProjects = () => {
       description: "An acupuncture patient logging site with user authentication, patient data logging and admin dashboard. Built with React, and using Firebase for authentication and data storage.",
       technologies: ["JS", "React", "Vite", "HTML/CSS", "Firebase"],
       demoUrl: "https://aku-log.netlify.app",
-      showDemo: true,
+      showDemo: false,
       githubUrl: "https://github.com/cecilieej/akupunktur-app",
       showGithub: true,
       imageUrl: "/aku-log.png"
     },
-    {
+    /*{
       id: 2,
       title: "Dopamine Clicker",
       description: "In progress. A clicker-style game that will stimulate your senses as you earn dopamine points. Inteded as commentary on overstimulation. Built with React and Vite.",
@@ -23,10 +23,10 @@ const MyProjects = () => {
       githubUrl: "https://github.com/cecilieej/dopamine-clicker",
       showGithub: true,
       imageUrl: "/placeholder.png"
-    },
+    },*/
     // description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    {
-      id: 3,
+        {
+      id: 2,
       title: "EcoHour",
       description: "Calendar designed for households to optimize energy usage during low-cost hours by displaying real-time electricity prices. 10th semester project. Built with Java in Android Studio.",
       technologies: ["Android", "Java", "Kotlin", "MinStrøm API", "HTML/CSS"],
@@ -37,7 +37,7 @@ const MyProjects = () => {
       imageUrl: "\ecohour.png"
     },
     {
-      id: 4,
+      id: 3,
       title: "Data Entry Optimization Tool",
       description: "A tool designed during my 8th semester to streamline data entry processes and reduce manual input errors for an engineering company working with PLM systems in M365. Built with Python.",
       technologies: ["Python", "Pandas", "ML Algorithms", "ScikitLearn", "SQL"],
@@ -48,9 +48,20 @@ const MyProjects = () => {
       imageUrl: "/PLM-solution.png"
     },
     {
+      id: 4,
+      title: "Dekoform",
+      description: "Website built for Dekoform, interior design company in Odense. With over 20 subpages. Built with Webflow.",
+      technologies: ["HTML/CSS", "JS", "Webflow"],
+      demoUrl: "https://https://www.dekoform.dk",
+      showDemo: true,
+      githubUrl: "#",
+      showGithub: false,
+      imageUrl: "/dekoformintro.png"
+    },
+    {
       id: 5,
-      title: "Movie Website",
-      description: "In progress. A platform for myself and friends to import Letterboxd data to see which movies you have in common with other users. Building with React and using Firebase for authentication and data storage.",
+      title: "Letterboxd-with-friends",
+      description: "In progress. A platform for myself and friends to import Letterboxd data to see which you have in common. Built with React and Firebase.",
       technologies: ["JS", "React", "Vite", "HTML/CSS", "Tailwind CSS", "Framer Motion", "Firebase"],
       demoUrl: "#",
       showDemo: false,
@@ -61,7 +72,7 @@ const MyProjects = () => {
     {
       id: 6,
       title: "Portfolio Website",
-      description: "The site you're viewing right now! A simple portfolio website built with React and Vite. Also featuring a nice dark mode for your (and my own) viewing pleasure.",
+      description: "The site you're viewing right now! A simple portfolio website built with React and Vite. Featuring a nice dark mode for your (and my own) viewing pleasure.",
       technologies: ["JS", "React", "Vite", "HTML/CSS", "Vercel"],
       demoUrl: "https://cecilieej.vercel.app",
       showDemo: true,
